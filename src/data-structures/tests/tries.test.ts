@@ -4,11 +4,19 @@ describe("Trie", () => {
   it("should pass a basic test", () => {
     const trie = new Trie();
 
-    expect(trie.containsWord("jaime")).toBeFalsy();
+    expect(trie.contains("jaime")).toBeFalsy();
 
-    trie.addWord("apple");
+    trie.add("apple");
 
-    expect(trie.containsWord("apple")).toBeTruthy();
-    expect(trie.containsWord("app")).toBeFalsy();
+    expect(trie.size).toBe(1);
+
+    expect(trie.contains("apple")).toBeTruthy();
+    expect(trie.contains("app")).toBeFalsy();
+    expect(trie.startsWith("app")).toBeTruthy();
+
+    trie.remove("apple");
+
+    expect(trie.contains("apple")).toBeFalsy();
+    expect(trie.size).toBe(0);
   });
 });

@@ -7,16 +7,28 @@ import {
 
 export class TreeHelper {
   static convertArrayIntoBalancedBinaryTree(
-    numbers: number[]
+    numbers: number[],
+    start: number = 0,
+    end: number = numbers.length
   ): TreeNode | null {
-    if (numbers.length === 0) {
+    if (start >= end) {
       return null;
     }
 
-    const root = new TreeNode(numbers.shift()!);
+    const mid = start + Math.floor((end - start) / 2);
 
-    root.left = TreeHelper.convertArrayIntoBalancedBinaryTree(numbers);
-    root.right = TreeHelper.convertArrayIntoBalancedBinaryTree(numbers);
+    const root = new TreeNode(numbers[mid]);
+
+    root.left = TreeHelper.convertArrayIntoBalancedBinaryTree(
+      numbers,
+      start,
+      mid
+    );
+    root.right = TreeHelper.convertArrayIntoBalancedBinaryTree(
+      numbers,
+      mid + 1,
+      end
+    );
 
     return root;
   }

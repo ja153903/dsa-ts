@@ -47,7 +47,7 @@ function maximumDetonation(bombs: Bomb[]): number {
   }
 
   for (let i = 0; i < bombs.length; i++) {
-    let path: [number] = [0];
+    const path: [number] = [0];
     const visited = new Set<number>();
     dfs(graph, visited, path, i);
     result = Math.max(result, path[0]);

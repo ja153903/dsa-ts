@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-this-alias */
+
 export class Trie {
   #isWord: boolean;
   #children: Map<string, Trie>;

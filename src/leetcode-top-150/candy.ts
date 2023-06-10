@@ -1,6 +1,3 @@
-// TODO: Solve this problem
-function candy(ratings: number[]): number {
-  return 0;
-}
+function candy(ratings: number[]): number {}
 
 export { candy };

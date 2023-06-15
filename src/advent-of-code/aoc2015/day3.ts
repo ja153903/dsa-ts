@@ -5,34 +5,31 @@ const PATH_TO_FILE = "src/advent-of-code/aoc2015/data/day3.txt";
 export const content = readFile(PATH_TO_FILE);
 
 export function part1(data: string): number {
+  const parsedData = data.split("\n")[0];
   const visited = new Set<string>();
   let x = 0,
     y = 0;
 
   visited.add(`${x},${y}`);
 
-  data
-    .split("\n")
-    .at(0)
-    ?.split("")
-    .forEach((ch) => {
-      switch (ch) {
-      case "^":
-        y += 1;
-        break;
-      case "v":
-        y -= 1;
-        break;
-      case ">":
-        x += 1;
-        break;
-      case "<":
-        x -= 1;
-        break;
-      }
+  parsedData.split("").forEach((ch) => {
+    switch (ch) {
+    case "^":
+      y += 1;
+      break;
+    case "v":
+      y -= 1;
+      break;
+    case ">":
+      x += 1;
+      break;
+    case "<":
+      x -= 1;
+      break;
+    }
 
-      visited.add(`${x},${y}`);
-    });
+    visited.add(`${x},${y}`);
+  });
 
   return visited.size;
 }

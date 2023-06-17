@@ -1,5 +1,10 @@
 import md5 from "md5";
 
+// NOTE: There is definitely a better way of solving this question
+// but for now, I'll defer to this brute force solution.
+// An idea I can think of is using binary search, but
+// the condition to limit the bounds is escaping me.
+
 const content = "iwrupvqb";
 
 export function part1() {

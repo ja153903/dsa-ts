@@ -10,7 +10,6 @@
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "^29.5.1",
-    "@types/lodash": "^4.14.195",
     "@types/md5": "^2.3.2",
     "@types/node": "^20.2.5",
     "@typescript-eslint/eslint-plugin": "^5.59.9",
@@ -23,7 +22,6 @@
   },
   "dependencies": {
     "@datastructures-js/priority-queue": "^6.3.0",
-    "lodash": "^4.17.21",
     "md5": "^2.3.0"
   }
 }

@@ -58,14 +58,14 @@ function doop(a: number, b: number, op?: InstructionOp): number {
   }
 
   switch (op) {
-  case "AND":
-    return a & b;
-  case "OR":
-    return a | b;
-  case "LSHIFT":
-    return a << b;
-  case "RSHIFT":
-    return a >> b;
+    case "AND":
+      return a & b;
+    case "OR":
+      return a | b;
+    case "LSHIFT":
+      return a << b;
+    case "RSHIFT":
+      return a >> b;
   }
 
   // NOTE: Unable to reach here
@@ -227,5 +227,3 @@ export function part2(data: string): number {
 
   return identifiers.get("a") ?? 0;
 }
-
-// export function part2() {}

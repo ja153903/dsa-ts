@@ -6,10 +6,10 @@ export function createFilePathToData(
   isSample = false
 ): string {
   if (isSample) {
-    return `src/advent-of-code/aoc${year}/day${day}.sample.txt`;
+    return `src/advent-of-code/aoc${year}/data/day${day}.sample.txt`;
   }
 
-  return `src/advent-of-code/aoc${year}/day${day}.txt`;
+  return `src/advent-of-code/aoc${year}/data/day${day}.txt`;
 }
 
 export function readFile(path: string): string | null {

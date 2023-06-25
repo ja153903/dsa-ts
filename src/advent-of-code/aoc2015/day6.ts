@@ -1,10 +1,8 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 
-import { readFile } from "../utils";
+import { readFile, createFilePathToData } from "../utils";
 
-const PATH_TO_FILE = "src/advent-of-code/aoc2015/data/day6.txt";
-
-export const content = readFile(PATH_TO_FILE);
+export const content = readFile(createFilePathToData(2015, 6));
 
 type Coord = { x: number; y: number };
 type Instruction = {
@@ -62,15 +60,15 @@ export function part1(data: string): number {
     for (let row = start.x; row <= end.x; row++) {
       for (let col = start.y; col <= end.y; col++) {
         switch (cmd) {
-        case "turn on":
-          matrix[row][col] = 1;
-          break;
-        case "turn off":
-          matrix[row][col] = 0;
-          break;
-        default:
-          matrix[row][col] ^= 1;
-          break;
+          case "turn on":
+            matrix[row][col] = 1;
+            break;
+          case "turn off":
+            matrix[row][col] = 0;
+            break;
+          default:
+            matrix[row][col] ^= 1;
+            break;
         }
       }
     }
@@ -97,15 +95,15 @@ export function part2(data: string) {
     for (let row = start.x; row <= end.x; row++) {
       for (let col = start.y; col <= end.y; col++) {
         switch (cmd) {
-        case "turn on":
-          matrix[row][col] += 1;
-          break;
-        case "turn off":
-          matrix[row][col] = Math.max(0, matrix[row][col] - 1);
-          break;
-        default:
-          matrix[row][col] += 2;
-          break;
+          case "turn on":
+            matrix[row][col] += 1;
+            break;
+          case "turn off":
+            matrix[row][col] = Math.max(0, matrix[row][col] - 1);
+            break;
+          default:
+            matrix[row][col] += 2;
+            break;
         }
       }
     }

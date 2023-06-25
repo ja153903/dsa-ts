@@ -1,8 +1,6 @@
-import { readFile } from "../utils";
+import { createFilePathToData, readFile } from "../utils";
 
-const PATH_TO_FILE = "src/advent-of-code/aoc2015/data/day2.txt";
-
-export const content = readFile(PATH_TO_FILE);
+export const content = readFile(createFilePathToData(2015, 2));
 
 function calculateSurfaceArea(l: number, w: number, h: number): number {
   return 2 * l * w + 2 * l * h + 2 * w * h;

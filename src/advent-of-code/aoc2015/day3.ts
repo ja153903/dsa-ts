@@ -1,8 +1,6 @@
-import { readFile } from "../utils";
+import { readFile, createFilePathToData } from "../utils";
 
-const PATH_TO_FILE = "src/advent-of-code/aoc2015/data/day3.txt";
-
-export const content = readFile(PATH_TO_FILE);
+export const content = readFile(createFilePathToData(2015, 3));
 
 export function part1(data: string): number {
   const parsedData = data.split("\n")[0];

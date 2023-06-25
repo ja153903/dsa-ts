@@ -1,10 +1,9 @@
-import { readFile } from "../utils";
+import { createFilePathToData, readFile } from "../utils";
 
-const PATH_TO_SAMPLE_FILE = "src/advent-of-code/aoc2015/data/day1.sample.txt";
-const PATH_TO_FILE = "src/advent-of-code/aoc2015/data/day1.txt";
+const IS_SAMPLE = true;
 
-export const content = readFile(PATH_TO_FILE);
-export const sampleContent = readFile(PATH_TO_SAMPLE_FILE);
+export const content = readFile(createFilePathToData(2015, 1));
+export const sampleContent = readFile(createFilePathToData(2015, 1, IS_SAMPLE));
 
 export function part1(data: string) {
   return data?.split("")?.reduce((acc, char) => {

@@ -1,6 +1,4 @@
-import { readFile } from "../utils";
-
-const PATH_TO_FILE = "src/advent-of-code/aoc2015/data/day7.txt";
+import { readFile, createFilePathToData } from "../utils";
 
 type InstructionOp = "OR" | "AND" | "LSHIFT" | "RSHIFT" | "NOT";
 type Operation = {
@@ -15,7 +13,7 @@ type Instruction = {
   assignTo: string;
 };
 
-export const content = readFile(PATH_TO_FILE);
+export const content = readFile(createFilePathToData(2015, 7));
 
 function isNumber(value: string): boolean {
   if (!value) {
@@ -58,14 +56,14 @@ function doop(a: number, b: number, op?: InstructionOp): number {
   }
 
   switch (op) {
-    case "AND":
-      return a & b;
-    case "OR":
-      return a | b;
-    case "LSHIFT":
-      return a << b;
-    case "RSHIFT":
-      return a >> b;
+  case "AND":
+    return a & b;
+  case "OR":
+    return a | b;
+  case "LSHIFT":
+    return a << b;
+  case "RSHIFT":
+    return a >> b;
   }
 
   // NOTE: Unable to reach here

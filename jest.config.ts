@@ -5,7 +5,7 @@ const config: Config = {
   preset: "ts-jest",
   testEnvironment: "node",
   transform: {
-    "^.+\\.ts?$": "ts-jest",
+    "^.+\\.(j|t)s?$": "ts-jest",
   },
 };
 

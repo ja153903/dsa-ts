@@ -1,4 +1,4 @@
-import { TreeNode } from "../data-structures/trees";
+import { TreeNode } from "../data-structures-and-algorithms/trees";
 
 function getMinimumDifference(root: TreeNode | null): number {
   // if we have a BST the minimum difference can be found by just looking at

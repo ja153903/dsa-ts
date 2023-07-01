@@ -3,7 +3,7 @@ import {
   inOrderTraversal,
   postOrderTraversal,
   preOrderTraversal,
-} from "../data-structures/trees";
+} from "../data-structures-and-algorithms/trees";
 
 export class TreeHelper {
   static convertArrayIntoBalancedBinaryTree(

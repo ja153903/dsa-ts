@@ -1,4 +1,4 @@
-import { ListNode } from "../data-structures/linked-list";
+import { ListNode } from "../data-structures-and-algorithms/linked-list";
 
 export class LinkedListHelper {
   static convertLinkedListToArray(node: ListNode | null): Array<number> {
